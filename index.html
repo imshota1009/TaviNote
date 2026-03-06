@@ -161,12 +161,13 @@
                                 場所を追加</button>
                         </div>
                         <div class="places-filter">
-                            <button class="filter-btn active" data-category="all">すべて</button>
-                            <button class="filter-btn" data-category="food">🍽️ 食事</button>
-                            <button class="filter-btn" data-category="sightseeing">🏛️ 観光</button>
-                            <button class="filter-btn" data-category="hotel">🏨 宿泊</button>
-                            <button class="filter-btn" data-category="shopping">🛍️ 買い物</button>
-                            <button class="filter-btn" data-category="other">📌 その他</button>
+                            <button class="filter-btn active" data-category="all" data-i18n="all">すべて</button>
+                            <button class="filter-btn" data-category="food" data-i18n="food">🍽️ 食事</button>
+                            <button class="filter-btn" data-category="sightseeing" data-i18n="sightseeing">🏛️
+                                観光</button>
+                            <button class="filter-btn" data-category="hotel" data-i18n="hotel">🏨 宿泊</button>
+                            <button class="filter-btn" data-category="shopping" data-i18n="shopping">🛍️ 買い物</button>
+                            <button class="filter-btn" data-category="other" data-i18n="other">📌 その他</button>
                         </div>
                         <div id="placesList" class="places-list"></div>
                     </div>
@@ -227,14 +228,15 @@
                     <h3 data-i18n="packingList">👜 持ち物チェックリスト</h3>
                     <div style="display:flex;gap:8px;flex-wrap:wrap;">
                         <select id="selectPackingTemplate" class="form-select-inline">
-                            <option value="">テンプレートを選ぶ</option>
-                            <option value="domestic">🏯 国内旅行</option>
-                            <option value="overseas">✈️ 海外旅行</option>
-                            <option value="daytrip">🚶 日帰り</option>
-                            <option value="camp">⛺ キャンプ</option>
+                            <option value="" data-i18n="selectTemplate">テンプレートを選ぶ</option>
+                            <option value="domestic" data-i18n="domestic">🏯 国内旅行</option>
+                            <option value="overseas" data-i18n="overseas">✈️ 海外旅行</option>
+                            <option value="daytrip" data-i18n="daytrip">🚶 日帰り</option>
+                            <option value="camp" data-i18n="camp">⛺ キャンプ</option>
                         </select>
-                        <button id="btnApplyPackingTemplate" class="btn btn-secondary btn-sm">テンプレ適用</button>
-                        <button id="btnNewPackingItem" class="btn btn-primary btn-sm">＋ 追加</button>
+                        <button id="btnApplyPackingTemplate" class="btn btn-secondary btn-sm"
+                            data-i18n="applyTemplate">テンプレ適用</button>
+                        <button id="btnNewPackingItem" class="btn btn-primary btn-sm" data-i18n="add">＋ 追加</button>
                     </div>
                 </div>
                 <div id="packingProgress" class="packing-progress"></div>
@@ -322,7 +324,7 @@
                 <div id="memoNotes" class="memo-notes">
                     <!-- memo notes inserted by JS -->
                 </div>
-                <div id="memoBoardEmpty" class="memo-board-empty">
+                <div id="memoBoardEmpty" class="memo-board-empty" data-i18n="memoBoardEmpty">
                     📌 ボードにメモを貼ってみよう！
                 </div>
             </div>
@@ -499,34 +501,34 @@
     <div id="modalNewTrip" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>🗺️ 新しい旅行を計画</h2>
+                <h2 data-i18n="planTrip">🗺️ 新しい旅行を計画</h2>
                 <button class="modal-close" data-close="modalNewTrip">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>旅行の名前</label>
+                    <label data-i18n="tripName">旅行の名前</label>
                     <input type="text" id="inputTripName" placeholder="例：沖縄旅行 2026年夏" />
                 </div>
                 <div class="form-group">
-                    <label>出発日</label>
+                    <label data-i18n="departure">出発日</label>
                     <input type="date" id="inputTripDate" />
                 </div>
                 <div class="form-group">
-                    <label>帰宅日</label>
+                    <label data-i18n="returnDate">帰宅日</label>
                     <input type="date" id="inputTripEndDate" />
                 </div>
                 <div class="form-group">
-                    <label>一緒に行く人</label>
+                    <label data-i18n="companions">一緒に行く人</label>
                     <input type="text" id="inputTripMembers" placeholder="例：家族、彼女、友達" />
                 </div>
                 <div class="form-group">
-                    <label>予算メモ</label>
+                    <label data-i18n="budgetMemo">予算メモ</label>
                     <input type="text" id="inputTripBudget" placeholder="例：10万円くらい" />
                 </div>
                 <div class="form-group">
-                    <label>行き先（都道府県）</label>
+                    <label data-i18n="prefectureLabel">行き先（都道府県）</label>
                     <select id="selectTripPrefecture">
-                        <option value="">未定 / 海外 / その他</option>
+                        <option value="" data-i18n="notSet">未定 / 海外 / その他</option>
                         <option value="北海道">北海道</option>
                         <option value="青森県">青森県</option>
                         <option value="岩手県">岩手県</option>
@@ -577,18 +579,18 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>テンプレート</label>
+                    <label data-i18n="template">テンプレート</label>
                     <select id="selectTemplate">
-                        <option value="none">使わない</option>
-                        <option value="domestic">国内旅行</option>
-                        <option value="overseas">海外旅行</option>
-                        <option value="daytrip">日帰り</option>
+                        <option value="none" data-i18n="dontUse">使わない</option>
+                        <option value="domestic" data-i18n="domesticTrip">国内旅行</option>
+                        <option value="overseas" data-i18n="overseasTrip">海外旅行</option>
+                        <option value="daytrip" data-i18n="daytripTrip">日帰り</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalNewTrip">キャンセル</button>
-                <button id="btnCreateTrip" class="btn btn-primary">旅行を作成</button>
+                <button class="btn btn-ghost" data-close="modalNewTrip" data-i18n="cancel">キャンセル</button>
+                <button id="btnCreateTrip" class="btn btn-primary" data-i18n="createTrip">旅行を作成</button>
             </div>
             <!-- ===== モーダル: ルームIDで参加 ===== -->
         </div>
@@ -647,31 +649,31 @@
     <div id="modalDiary" class="modal-overlay">
         <div class="modal modal-lg">
             <div class="modal-header">
-                <h2>📖 日記を書く</h2>
+                <h2 data-i18n="writeDiaryTitle">📖 日記を書く</h2>
                 <button class="modal-close" data-close="modalDiary">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>日付</label>
+                    <label data-i18n="date">日付</label>
                     <input type="date" id="inputDiaryDate" />
                 </div>
                 <div class="form-group">
-                    <label>タイトル</label>
+                    <label data-i18n="title">タイトル</label>
                     <input type="text" id="inputDiaryTitle" placeholder="例：初日の観光！" />
                 </div>
                 <div class="form-group">
-                    <label>日記の内容</label>
+                    <label data-i18n="diaryContent">日記の内容</label>
                     <textarea id="inputDiaryContent" rows="8" placeholder="今日の出来事を書いてみよう..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label>写真を追加</label>
+                    <label data-i18n="addPhoto">写真を追加</label>
                     <input type="file" id="inputDiaryPhoto" accept="image/*" />
                     <div id="diaryPhotoPreview" class="photo-preview"></div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalDiary">キャンセル</button>
-                <button id="btnSaveDiary" class="btn btn-primary">保存</button>
+                <button class="btn btn-ghost" data-close="modalDiary" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveDiary" class="btn btn-primary" data-i18n="saveBtn">保存</button>
             </div>
         </div>
     </div>
@@ -680,37 +682,37 @@
     <div id="modalPlace" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>📍 行きたい場所を追加</h2>
+                <h2 data-i18n="addPlaceTitle">📍 行きたい場所を追加</h2>
                 <button class="modal-close" data-close="modalPlace">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>場所の名前</label>
+                    <label data-i18n="placeName">場所の名前</label>
                     <input type="text" id="inputPlaceName" placeholder="例：美ら海水族館" />
                 </div>
                 <div class="form-group">
-                    <label>カテゴリ</label>
+                    <label data-i18n="category">カテゴリ</label>
                     <select id="selectPlaceCategory">
-                        <option value="sightseeing">🏛️ 観光</option>
-                        <option value="food">🍽️ 食事</option>
-                        <option value="hotel">🏨 宿泊</option>
-                        <option value="shopping">🛍️ 買い物</option>
-                        <option value="other">📌 その他</option>
+                        <option value="sightseeing" data-i18n="sightseeing">🏛️ 観光</option>
+                        <option value="food" data-i18n="food">🍽️ 食事</option>
+                        <option value="hotel" data-i18n="hotel">🏨 宿泊</option>
+                        <option value="shopping" data-i18n="shopping">🛍️ 買い物</option>
+                        <option value="other" data-i18n="other">📌 その他</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>メモ</label>
+                    <label data-i18n="memo">メモ</label>
                     <textarea id="inputPlaceMemo" rows="3" placeholder="例：入場料1,800円、10時オープン"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>住所で検索（地図にピン表示）</label>
+                    <label data-i18n="searchByAddress">住所で検索（地図にピン表示）</label>
                     <div class="search-input-row">
                         <input type="text" id="inputPlaceAddress" placeholder="例：沖縄県国頭郡本部町" />
                         <button id="btnSearchAddress" class="btn btn-secondary btn-sm">検索</button>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>緯度 / 経度（地図検索で自動入力）</label>
+                    <label data-i18n="latLng">緯度 / 経度（地図検索で自動入力）</label>
                     <div class="latlng-row">
                         <input type="number" id="inputPlaceLat" placeholder="緯度" step="any" />
                         <input type="number" id="inputPlaceLng" placeholder="経度" step="any" />
@@ -718,8 +720,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalPlace">キャンセル</button>
-                <button id="btnSavePlace" class="btn btn-primary">追加</button>
+                <button class="btn btn-ghost" data-close="modalPlace" data-i18n="cancel">キャンセル</button>
+                <button id="btnSavePlace" class="btn btn-primary" data-i18n="addBtn">追加</button>
             </div>
         </div>
     </div>
@@ -728,30 +730,30 @@
     <div id="modalTodo" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>✅ やることを追加</h2>
+                <h2 data-i18n="addTodoTitle">✅ やることを追加</h2>
                 <button class="modal-close" data-close="modalTodo">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>やること</label>
+                    <label data-i18n="todoContent">やること</label>
                     <input type="text" id="inputTodoText" placeholder="例：ホテルを予約する" />
                 </div>
                 <div class="form-group">
-                    <label>期限日</label>
+                    <label data-i18n="deadline">期限日</label>
                     <input type="date" id="inputTodoDeadline" />
                 </div>
                 <div class="form-group">
-                    <label>優先度</label>
+                    <label data-i18n="priority">優先度</label>
                     <select id="selectTodoPriority">
-                        <option value="low">🟢 低い</option>
-                        <option value="medium" selected>🟡 ふつう</option>
-                        <option value="high">🔴 高い</option>
+                        <option value="low" data-i18n="low">🟢 低い</option>
+                        <option value="medium" selected data-i18n="normal">🟡 ふつう</option>
+                        <option value="high" data-i18n="high">🔴 高い</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalTodo">キャンセル</button>
-                <button id="btnSaveTodo" class="btn btn-primary">追加</button>
+                <button class="btn btn-ghost" data-close="modalTodo" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveTodo" class="btn btn-primary" data-i18n="save">追加</button>
             </div>
         </div>
     </div>
@@ -765,26 +767,26 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>予定の内容</label>
+                    <label data-i18n="scheduleContent">予定の内容</label>
                     <input type="text" id="inputScheduleText" placeholder="例：美ら海水族館を見学" />
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>開始時間</label>
+                        <label data-i18n="startTime">開始時間</label>
                         <input type="time" id="inputScheduleStart" />
                     </div>
                     <div class="form-group">
-                        <label>終了時間</label>
+                        <label data-i18n="endTime">終了時間</label>
                         <input type="time" id="inputScheduleEnd" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>メモ</label>
+                    <label data-i18n="memo">メモ</label>
                     <textarea id="inputScheduleMemo" rows="2" placeholder="例：入場券はネットで事前購入"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalSchedule">キャンセル</button>
+                <button class="btn btn-ghost" data-close="modalSchedule" data-i18n="cancel">キャンセル</button>
                 <button id="btnSaveSchedule" class="btn btn-primary" data-i18n="save">追加</button>
             </div>
         </div>
@@ -794,34 +796,34 @@
     <div id="modalEditTrip" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>✏️ 旅行情報を編集</h2>
+                <h2 data-i18n="editTripInfo">✏️ 旅行情報を編集</h2>
                 <button class="modal-close" data-close="modalEditTrip">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>旅行の名前</label>
+                    <label data-i18n="tripName">旅行の名前</label>
                     <input type="text" id="editTripName" />
                 </div>
                 <div class="form-group">
-                    <label>出発日</label>
+                    <label data-i18n="departure">出発日</label>
                     <input type="date" id="editTripDate" />
                 </div>
                 <div class="form-group">
-                    <label>帰宅日</label>
+                    <label data-i18n="returnDate">帰宅日</label>
                     <input type="date" id="editTripEndDate" />
                 </div>
                 <div class="form-group">
-                    <label>一緒に行く人</label>
+                    <label data-i18n="companions">一緒に行く人</label>
                     <input type="text" id="editTripMembers" />
                 </div>
                 <div class="form-group">
-                    <label>予算メモ</label>
+                    <label data-i18n="budgetMemo">予算メモ</label>
                     <input type="text" id="editTripBudget" />
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalEditTrip">キャンセル</button>
-                <button id="btnUpdateTrip" class="btn btn-primary">更新</button>
+                <button class="btn btn-ghost" data-close="modalEditTrip" data-i18n="cancel">キャンセル</button>
+                <button id="btnUpdateTrip" class="btn btn-primary" data-i18n="updateBtn">更新</button>
             </div>
         </div>
     </div>
@@ -830,16 +832,16 @@
     <div id="modalMemo" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>📌 メモを追加</h2>
+                <h2 data-i18n="addMemoTitle">📌 メモを追加</h2>
                 <button class="modal-close" data-close="modalMemo">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>メモの内容</label>
+                    <label data-i18n="memoContent">メモの内容</label>
                     <textarea id="inputMemoText" rows="4" placeholder="例：お土産はちんすこうを買う！"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>メモの色</label>
+                    <label data-i18n="memoColor">メモの色</label>
                     <div class="memo-color-picker">
                         <label class="color-option"><input type="radio" name="memoColor" value="yellow" checked><span
                                 class="color-swatch" style="background:#FFF9C4"></span></label>
@@ -857,8 +859,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalMemo">キャンセル</button>
-                <button id="btnSaveMemo" class="btn btn-primary">貼り付ける 📌</button>
+                <button class="btn btn-ghost" data-close="modalMemo" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveMemo" class="btn btn-primary" data-i18n="pinMemo">貼り付ける 📌</button>
             </div>
         </div>
     </div>
@@ -867,46 +869,46 @@
     <div id="modalTicket" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>🎫 チケットを追加</h2>
+                <h2 data-i18n="addTicketTitle">🎫 チケットを追加</h2>
                 <button class="modal-close" data-close="modalTicket">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>種類</label>
+                    <label data-i18n="ticketType">種類</label>
                     <select id="selectTicketType">
-                        <option value="train">🚄 新幹線・電車</option>
-                        <option value="flight">✈️ 飛行機</option>
-                        <option value="hotel">🏨 ホテル</option>
-                        <option value="ryokan">🏨 旅館</option>
-                        <option value="event">🎫 イベント</option>
-                        <option value="other">📋 その他</option>
+                        <option value="train" data-i18n="trainTicket">🚄 新幹線・電車</option>
+                        <option value="flight" data-i18n="flightTicket">✈️ 飛行機</option>
+                        <option value="hotel" data-i18n="hotelTicket">🏨 ホテル</option>
+                        <option value="ryokan" data-i18n="ryokanTicket">🏯 旅館</option>
+                        <option value="event" data-i18n="eventTicket">🎫 イベント</option>
+                        <option value="other" data-i18n="otherTicket">📋 その他</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>タイトル</label>
+                    <label data-i18n="ticketTitle">タイトル</label>
                     <input type="text" id="inputTicketTitle" placeholder="例：東京→大阪 のぞみ" />
                 </div>
                 <div class="form-group">
-                    <label>予約番号・確認番号</label>
+                    <label data-i18n="reservationCode">予約番号・確認番号</label>
                     <input type="text" id="inputTicketCode" placeholder="例：ABC-12345" />
                 </div>
                 <div class="form-group">
-                    <label>日付</label>
+                    <label data-i18n="date">日付</label>
                     <input type="date" id="inputTicketDate" />
                 </div>
                 <div class="form-group">
-                    <label>メモ</label>
+                    <label data-i18n="ticketMemo">メモ</label>
                     <textarea id="inputTicketMemo" rows="2" placeholder="座席番号、注意事項など"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>QR画像（任意）</label>
+                    <label data-i18n="qrImage">QR画像（任意）</label>
                     <input type="file" id="inputTicketImage" accept="image/*" />
                     <div id="ticketImagePreview" class="photo-preview"></div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalTicket">キャンセル</button>
-                <button id="btnSaveTicket" class="btn btn-primary">保存</button>
+                <button class="btn btn-ghost" data-close="modalTicket" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveTicket" class="btn btn-primary" data-i18n="saveBtn">保存</button>
             </div>
         </div>
     </div>
@@ -915,29 +917,29 @@
     <div id="modalPackingItem" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>👜 持ち物を追加</h2>
+                <h2 data-i18n="addPackingTitle">👜 持ち物を追加</h2>
                 <button class="modal-close" data-close="modalPackingItem">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>アイテム名</label>
+                    <label data-i18n="itemName">アイテム名</label>
                     <input type="text" id="inputPackingItem" placeholder="例：パスポート" />
                 </div>
                 <div class="form-group">
-                    <label>カテゴリ</label>
+                    <label data-i18n="category">カテゴリ</label>
                     <select id="selectPackingCategory">
-                        <option value="貴重品">💳 貴重品</option>
-                        <option value="衣類">👕 衣類</option>
-                        <option value="洗面用具">🪥 洗面用具</option>
-                        <option value="電子機器">📱 電子機器</option>
-                        <option value="薬">💊 薬・救急</option>
-                        <option value="その他">📦 その他</option>
+                        <option value="貴重品" data-i18n="valuables">💳 貴重品</option>
+                        <option value="衣類" data-i18n="clothes">👕 衣類</option>
+                        <option value="洗面用具" data-i18n="toiletries">🪥 洗面用具</option>
+                        <option value="電子機器" data-i18n="electronics">📱 電子機器</option>
+                        <option value="薬" data-i18n="medicine">💊 薬・救急</option>
+                        <option value="その他" data-i18n="otherCat">📦 その他</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalPackingItem">キャンセル</button>
-                <button id="btnSavePackingItem" class="btn btn-primary">追加</button>
+                <button class="btn btn-ghost" data-close="modalPackingItem" data-i18n="cancel">キャンセル</button>
+                <button id="btnSavePackingItem" class="btn btn-primary" data-i18n="save">追加</button>
             </div>
         </div>
     </div>
@@ -946,41 +948,41 @@
     <div id="modalExpense" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>💰 支出を記録</h2>
+                <h2 data-i18n="recordExpense">💰 支出を記録</h2>
                 <button class="modal-close" data-close="modalExpense">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>何に使った？</label>
+                    <label data-i18n="whatSpent">何に使った？</label>
                     <input type="text" id="inputExpenseTitle" placeholder="例：ランチ代" />
                 </div>
                 <div class="form-group">
-                    <label>金額（円）</label>
+                    <label data-i18n="amountYen">金額（円）</label>
                     <input type="number" id="inputExpenseAmount" placeholder="1500" />
                 </div>
                 <div class="form-group">
-                    <label>カテゴリ</label>
+                    <label data-i18n="expenseCategory">カテゴリ</label>
                     <select id="selectExpenseCategory">
-                        <option value="transport">🚄 交通費</option>
-                        <option value="food">🍽️ 食事</option>
-                        <option value="hotel">🏨 宿泊</option>
-                        <option value="shopping">🛍️ 買い物</option>
-                        <option value="ticket">🎫 入場料</option>
-                        <option value="other">📦 その他</option>
+                        <option value="transport" data-i18n="transport">🚄 交通費</option>
+                        <option value="food" data-i18n="dining">🍽️ 食事</option>
+                        <option value="hotel" data-i18n="accommodation">🏨 宿泊</option>
+                        <option value="shopping" data-i18n="shoppingExp">🛍️ 買い物</option>
+                        <option value="ticket" data-i18n="admissionFee">🎫 入場料</option>
+                        <option value="other" data-i18n="otherExp">📦 その他</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>誰が払った？</label>
+                    <label data-i18n="whoPaid">誰が払った？</label>
                     <input type="text" id="inputExpensePayer" placeholder="例：たろう" />
                 </div>
                 <div class="form-group">
-                    <label>日付</label>
+                    <label data-i18n="date">日付</label>
                     <input type="date" id="inputExpenseDate" />
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalExpense">キャンセル</button>
-                <button id="btnSaveExpense" class="btn btn-primary">記録する</button>
+                <button class="btn btn-ghost" data-close="modalExpense" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveExpense" class="btn btn-primary" data-i18n="recordBtn">記録する</button>
             </div>
         </div>
     </div>
@@ -989,22 +991,22 @@
     <div id="modalPoll" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>🗳️ 投票を作る</h2>
+                <h2 data-i18n="createVoteTitle">🗳️ 投票を作る</h2>
                 <button class="modal-close" data-close="modalPoll">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>質問</label>
+                    <label data-i18n="question">質問</label>
                     <input type="text" id="inputPollQuestion" placeholder="例：ランチはどこにする？" />
                 </div>
                 <div class="form-group">
-                    <label>選択肢（改行で区切る）</label>
+                    <label data-i18n="options">選択肢（改行で区切る）</label>
                     <textarea id="inputPollOptions" rows="4" placeholder="寿司屋\nイタリアン\nラーメン"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalPoll">キャンセル</button>
-                <button id="btnSavePoll" class="btn btn-primary">作成</button>
+                <button class="btn btn-ghost" data-close="modalPoll" data-i18n="cancel">キャンセル</button>
+                <button id="btnSavePoll" class="btn btn-primary" data-i18n="createBtn">作成</button>
             </div>
         </div>
     </div>
@@ -1013,22 +1015,22 @@
     <div id="modalReminder" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>⏰ リマインダー</h2>
+                <h2 data-i18n="reminderTitle">⏰ リマインダー</h2>
                 <button class="modal-close" data-close="modalReminder">✕</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>内容</label>
+                    <label data-i18n="content">内容</label>
                     <input type="text" id="inputReminderText" placeholder="例：充電器を確認する" />
                 </div>
                 <div class="form-group">
-                    <label>日付</label>
+                    <label data-i18n="date">日付</label>
                     <input type="date" id="inputReminderDate" />
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-ghost" data-close="modalReminder">キャンセル</button>
-                <button id="btnSaveReminder" class="btn btn-primary">追加</button>
+                <button class="btn btn-ghost" data-close="modalReminder" data-i18n="cancel">キャンセル</button>
+                <button id="btnSaveReminder" class="btn btn-primary" data-i18n="save">追加</button>
             </div>
         </div>
     </div>
