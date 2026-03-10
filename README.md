@@ -28,7 +28,6 @@ Our new marketing landing page introduces the brand vision and provides quick ac
 
 ### Mobile & App Environment
 The core TaviNote application is now optimized for mobile via **Capacitor**.
-- **Web App**: Accessible via the "Web版アプリ" link on the landing page or directly at `app.html`.
 - **Android**: Native app support with offline-first synchronization.
 
 ---
