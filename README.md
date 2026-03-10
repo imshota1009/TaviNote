@@ -24,7 +24,7 @@ Most travel apps focus only on the destination. TaviNote focuses on the **journe
 
 ### Web Landing Page
 Our new marketing landing page introduces the brand vision and provides quick access to our legal documents and app downloads.
-**👉 [Visit TaviNote Homepage](https://tavinote-app-shota.web.app/)**
+**👉 [Visit TaviNote Homepage](https://tavinote.web.app/)**
 
 ### Mobile & App Environment
 The core TaviNote application is now optimized for mobile via **Capacitor**.
@@ -34,39 +34,6 @@ The core TaviNote application is now optimized for mobile via **Capacitor**.
 ---
 
 ## 🔧 Core Features
-
-### 📋 Planning & Execution
-- **Smart Preparation**: Automated TODO and Packing templates for Domestic, International, and specialized trips.
-- **Dynamic Itinerary**: Timeline-based scheduling with real-time updates.
-- **Collaborative Polls**: Easily decide on destinations or meals with group voting.
-
-### 💰 Management & Tools
-- **Expense Tracker**: Real-time bill splitting and budget comparison.
-- **Ticket Vault**: Centralized storage for QR codes, reservation IDs, and hotel confirmations.
-- **Interactive Maps**: Powered by Leaflet and OpenStreetMap for discovering nearby convenience stores and stations.
-
----
-
-## 📁 Repository Structure
-
-```
-TaviNote/
-├── public/
-│   ├── index.html       # BRAND NEW: Marketing Landing Page
-│   ├── app.html         # CORE: Main Application Interface
-│   ├── app.js           # Logic for the core application
-│   ├── landing.css      # Styles for the landing page
-│   ├── style.css        # Styles for the core application
-│   ├── terms.html       # Official Terms of Service
-│   └── privacy.html     # Official Privacy Policy
-├── android/             # Native Android project files (Capacitor)
-├── capacitor.config.json # Mobile application configuration
-└── README.md            # This file
-```
-
----
-
-## 🛠️ Technology Stack
 
 | Component | Technology |
 |------|------|
