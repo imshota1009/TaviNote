@@ -1,0 +1,25 @@
+# Sensitive Application Files
+public/app.html
+public/app.js
+public/style.css
+public/assets/
+public/icons/
+
+# Platform Projects
+android/
+ios/
+
+# Configuration Files
+capacitor.config.json
+firebase.json
+.firebaserc
+package-lock.json
+*.log
+
+# Dependencies
+node_modules/
+.firebase/
+
+# OS Files
+.DS_Store
+Thumbs.db
