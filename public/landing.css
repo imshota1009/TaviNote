@@ -1947,7 +1947,7 @@ footer {
 
 .cat__tail {
     fill: none;
-    stroke: var(--text-main);
+    stroke: #7A6E63;
     stroke-width: 10px;
     stroke-linecap: round;
     transform-origin: 108px 97px;
@@ -1979,8 +1979,8 @@ footer {
 }
 
 .cat__ear {
-    fill: var(--bg-light);
-    stroke: var(--text-main);
+    fill: #FAF0E6;
+    stroke: #7A6E63;
     stroke-width: 8px;
 }
 
@@ -2003,7 +2003,7 @@ footer {
 }
 
 .cat__body {
-    fill: var(--primary-dark);
+    fill: #E2D2C2;
     transform-origin: center bottom;
     animation:
         body-settle 0.7s ease-in-out 0.2s both,
