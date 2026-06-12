@@ -1826,8 +1826,7 @@ footer {
     border-radius: 999px;
     animation:
         stem-grow 0.4s ease-in-out 0s both,
-        stem-extend 0.3s ease-in-out 1.6s forwards,
-        stem-retract 0.6s ease-in-out 3.2s forwards;
+        stem-extend 0.3s ease-in-out 1.6s forwards;
 }
 
 @keyframes stem-grow {
@@ -1854,8 +1853,7 @@ footer {
     left: 2%;
     transform-origin: 100% 87%;
     animation:
-        leaf-pop-1 0.8s ease-in-out 0.4s both,
-        leaf-hide-1 0.3s ease-in-out 3.3s forwards;
+        leaf-pop-1 0.8s ease-in-out 0.4s both;
 }
 @keyframes leaf-pop-1 {
     from { transform: scale(0) rotate(-50deg) skewX(-10deg); }
@@ -1871,8 +1869,7 @@ footer {
     right: 2%;
     transform-origin: 0% 87%;
     animation:
-        leaf-pop-2 0.8s ease-in-out 0.3s both,
-        leaf-hide-2 0.3s ease-in-out 3.2s forwards;
+        leaf-pop-2 0.8s ease-in-out 0.3s both;
 }
 @keyframes leaf-pop-2 {
     from { transform: scale(0) rotate(80deg) skewX(-5deg); }
@@ -1891,8 +1888,7 @@ footer {
     left: 10%;
     width: 80%;
     animation:
-        bloom-pop 0.7s ease-in-out 1.85s both,
-        bloom-hide 0.4s ease-in-out 3s forwards;
+        bloom-pop 0.7s ease-in-out 1.85s both;
 }
 @keyframes bloom-pop {
     from { transform: scale(0) rotate(-30deg); }
@@ -1913,8 +1909,7 @@ footer {
     border-radius: 50%;
     background-color: var(--accent);
     animation:
-        seed-pop 0.7s ease-in-out 1.95s both,
-        seed-hide 0.4s ease-in-out 3s forwards;
+        seed-pop 0.7s ease-in-out 1.95s both;
 }
 @keyframes seed-pop {
     from { transform: scale(0); }
