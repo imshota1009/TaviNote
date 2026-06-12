@@ -1955,10 +1955,7 @@ footer {
 
 .cat__ears {
     transform: translateY(3px);
-    animation:
-        ears-settle 0.7s ease-in-out 0.2s both,
-        ears-tilt 0.7s ease-in-out 1.7s forwards,
-        ears-reset 0.7s ease-in-out 3.4s forwards;
+    animation: ears-look-up 8s ease-in-out infinite;
 }
 @keyframes ears-settle {
     from { transform: rotate(-10deg) translate(-15px, 18px) scale(1, 1.1); }
@@ -2000,10 +1997,7 @@ footer {
 .cat__body {
     fill: #E2D2C2;
     transform-origin: center bottom;
-    animation:
-        body-settle 0.7s ease-in-out 0.2s both,
-        body-stretch 0.7s ease-in-out 1.7s forwards,
-        body-reset 0.7s ease-in-out 3.4s forwards;
+    animation: body-look-up 8s ease-in-out infinite;
 }
 @keyframes body-settle {
     from { transform: scale(1.04, 0.9); }
@@ -2020,10 +2014,7 @@ footer {
 
 .cat__eye {
     fill: #f5f5f5;
-    animation:
-        eye-settle 0.7s ease-in-out 0.2s both,
-        eye-squint 0.7s ease-in-out 1.7s forwards,
-        eye-reset 0.7s ease-in-out 3.4s forwards;
+    animation: eye-look-up 8s ease-in-out infinite;
 }
 @keyframes eye-settle {
     from { transform: translate(-10px, 20px) scaleY(0.9); }
@@ -2036,4 +2027,31 @@ footer {
 @keyframes eye-reset {
     from { transform: translate(-2px, -8px) scaleY(0.8); }
     to { transform: translate(-10px, 20px) scaleY(0.9); }
+}
+
+@keyframes body-look-up {
+    0%, 45%, 100% {
+        transform: scale(1, 1);
+    }
+    55%, 90% {
+        transform: scale(0.94, 1.1) skewX(2deg);
+    }
+}
+
+@keyframes ears-look-up {
+    0%, 45%, 100% {
+        transform: translate(0px, 3px) rotate(0deg);
+    }
+    55%, 90% {
+        transform: rotate(7deg) translate(14px, -5px) scale(1, 1.1);
+    }
+}
+
+@keyframes eye-look-up {
+    0%, 45%, 100% {
+        transform: translate(0, 0) scaleY(1);
+    }
+    55%, 90% {
+        transform: translate(-3px, -8px) scaleY(0.8);
+    }
 }
